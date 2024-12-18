@@ -1,16 +1,18 @@
-# Ping CRM - Svelte
+# Ping CRM React
 
-A demo application to illustrate how Inertia.js works.
+A demo application to illustrate how [Inertia.js](https://inertiajs.com/) works with [Laravel](https://laravel.com/) and [React](https://reactjs.org/).
 
-![](https://raw.githubusercontent.com/inertiajs/pingcrm/master/screenshot.png)
+> This is a port of the original [Ping CRM](https://github.com/inertiajs/pingcrm) written in Laravel and Vue.
+
+![](https://raw.githubusercontent.com/liorocks/pingcrm-react/master/screenshot.png)
 
 ## Installation
 
 Clone the repo locally:
 
 ```sh
-git clone https://github.com/inertiajs/pingcrm-svelte.git pingcrm-svelte
-cd pingcrm-svelte
+git clone https://github.com/liorocks/pingcrm-react.git
+cd pingcrm-react
 ```
 
 Install PHP dependencies:
@@ -22,7 +24,7 @@ composer install
 Install NPM dependencies:
 
 ```sh
-npm ci
+npm install
 ```
 
 Build assets:
@@ -61,13 +63,13 @@ Run database seeder:
 php artisan db:seed
 ```
 
-Run the dev server (the output will give the address):
+Run artisan server:
 
 ```sh
 php artisan serve
 ```
 
-You're ready to go! Visit Ping CRM in your browser, and login with:
+You're ready to go! [Visit Ping CRM](http://127.0.0.1:8000/) in your browser, and login with:
 
 - **Username:** johndoe@example.com
 - **Password:** secret
@@ -77,5 +79,11 @@ You're ready to go! Visit Ping CRM in your browser, and login with:
 To run the Ping CRM tests, run:
 
 ```
-phpunit
+php artisan test
 ```
+
+## Credits
+
+- Original work by Jonathan Reinink (@reinink) and contributors
+- Port to Ruby on Rails by Georg Ledermann (@ledermann)
+- Port to React by Lio (@liorocks)

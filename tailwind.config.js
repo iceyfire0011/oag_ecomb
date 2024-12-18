@@ -1,8 +1,7 @@
-import defaultTheme from 'tailwindcss/defaultTheme'
+import defaultTheme from 'tailwindcss/defaultTheme';
 
-/** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./resources/**/*.{js,svelte,blade.php}'],
+  content: ['./resources/**/*.{js,jsx,ts,tsx,blade.php}'],
   theme: {
     extend: {
       colors: {
@@ -13,12 +12,16 @@ export default {
           500: '#6574cd',
           600: '#5661b3',
           800: '#2f365f',
-          900: '#191e38',
-        },
+          900: '#191e38'
+        }
       },
       fontFamily: {
-        sans: ['"Cerebri Sans"', ...defaultTheme.fontFamily.sans],
-      },
-    },
+        sans: ['"Cerebri Sans"', ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
-}
+  plugins: [
+    require('@tailwindcss/forms')
+    // ...
+  ]
+};
